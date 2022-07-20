@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace TestEditor.Infrastructure
 {
-    public class ImageBuilder
+    public class ImageBuilder : DataBuilder<Image>
     {
         private float fillAmount;
         public ImageBuilder(float fillAmount)
@@ -23,20 +23,11 @@ namespace TestEditor.Infrastructure
             return this;
         }
 
-        public Image Build()
+        public override Image Build()
         {
             var image = new GameObject().AddComponent<Image>();
             image.fillAmount = fillAmount;
             return image;
-        }
-
-        public static implicit operator Image(ImageBuilder imageBuilder)
-        {
-            // make code cleaner
-            // var target = An.Image(targetFill).Build();
-            // to
-            // Image target = An.Image(targetFill);
-            return imageBuilder.Build();
         }
     }
 }

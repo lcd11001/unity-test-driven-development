@@ -1,5 +1,3 @@
-using UnityEngine.UI;
-
 namespace TestEditor.Infrastructure
 {
     public static class Builder

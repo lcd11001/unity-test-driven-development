@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace TestEditor.Infrastructure
 {
-    public class HeartBuilder
+    public class HeartBuilder : DataBuilder<Heart>
     {
         private Image image;
         public HeartBuilder(Image image)
@@ -26,14 +26,9 @@ namespace TestEditor.Infrastructure
             return this;
         }
 
-        public Heart Build()
+        public override Heart Build()
         {
             return new Heart(image);
-        }
-
-        public static implicit operator Heart(HeartBuilder heartBuilder)
-        {
-            return heartBuilder.Build();
         }
     }
 }
