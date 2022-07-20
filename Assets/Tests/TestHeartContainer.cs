@@ -80,7 +80,7 @@ namespace TestEditor
             }
 
             [Test]
-            public void _4_hearts_are_replenished_with_10_pieces()
+            public void _4_hearts_are_replenished_with_10_pieces_from_0_index()
             {
                 heartContainer = Builder
                     .HeartContainer()
@@ -95,6 +95,26 @@ namespace TestEditor
                 Assert.AreEqual(4, heartContainer[0].FilledHeartPieces);
                 Assert.AreEqual(4, heartContainer[1].FilledHeartPieces);
                 Assert.AreEqual(2, heartContainer[2].FilledHeartPieces);
+            }
+
+            [Test]
+            public void _5_hearts_are_replenished_with_10_pieces_from_1_index()
+            {
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                        Builder.Heart(),
+                        Builder.Heart(),
+                        Builder.Heart()
+                    );
+
+                heartContainer.Replenish(10);
+
+                Assert.AreEqual(4, heartContainer[0].FilledHeartPieces);
+                Assert.AreEqual(4, heartContainer[1].FilledHeartPieces);
+                Assert.AreEqual(4, heartContainer[2].FilledHeartPieces);
+                Assert.AreEqual(2, heartContainer[3].FilledHeartPieces);
             }
 
             [Test]
@@ -161,7 +181,7 @@ namespace TestEditor
             }
 
             [Test]
-            public void _4_hearts_are_depleted_with_10_pieces()
+            public void _4_hearts_are_depleted_with_10_pieces_from_last_index()
             {
                 heartContainer = Builder
                     .HeartContainer()
@@ -173,6 +193,26 @@ namespace TestEditor
 
                 heartContainer.Deplete(10);
 
+                Assert.AreEqual(0, heartContainer[2].FilledHeartPieces);
+                Assert.AreEqual(0, heartContainer[1].FilledHeartPieces);
+                Assert.AreEqual(2, heartContainer[0].FilledHeartPieces);
+            }
+
+            [Test]
+            public void _5_hearts_are_depleted_with_10_pieces_from_last1_index()
+            {
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(0))
+                    );
+
+                heartContainer.Deplete(10);
+
+                Assert.AreEqual(0, heartContainer[3].FilledHeartPieces);
                 Assert.AreEqual(0, heartContainer[2].FilledHeartPieces);
                 Assert.AreEqual(0, heartContainer[1].FilledHeartPieces);
                 Assert.AreEqual(2, heartContainer[0].FilledHeartPieces);

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.UI;
 
 public class HeartContainer
@@ -12,26 +13,27 @@ public class HeartContainer
 
     public void Replenish(int numberOfHeartPieces)
     {
-        for (int i = 0, len = hearts.Count; i < len; i++)
+        // left to right
+        foreach (var heart in hearts)
         {
-            var heart = hearts[i];
-            
-            heart.Replenish(numberOfHeartPieces);
-            numberOfHeartPieces -= (heart.FilledHeartPieces);
-            
+            int pieces = Math.Min(numberOfHeartPieces, heart.EmptyHeartPieces);
+            heart.Replenish(pieces);
+            numberOfHeartPieces -= pieces;
+
             if (numberOfHeartPieces <= 0) break;
         }
     }
 
     public void Deplete(int numberOfHeartPieces)
     {
-        for (int i = hearts.Count - 1; i > -1; i--)
+        // right to left
+        // Must use System.Linq
+        foreach (var heart in hearts.AsEnumerable().Reverse())
         {
-            var heart = hearts[i];
-            
-            heart.Deplete(numberOfHeartPieces);
-            numberOfHeartPieces -= heart.EmptyHeartPieces;
-            
+            int pieces = Math.Min(numberOfHeartPieces, heart.FilledHeartPieces);
+            heart.Deplete(pieces);
+            numberOfHeartPieces -= pieces;
+
             if (numberOfHeartPieces <= 0) break;
         }
     }
