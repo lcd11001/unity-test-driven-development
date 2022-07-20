@@ -21,14 +21,14 @@ namespace TestEditor
             heart = new Heart(image);
         }
 
-        public class TheCurrentNumberOfHeartPiecesProperty : TestHeart
+        public class TheFilledHeartPiecesProperty : TestHeart
         {
             [Test]
             public void _1_image_fill_is_0_heart_pieces()
             {
                 image.fillAmount = 0f;
 
-                Assert.AreEqual(0, heart.CurrentNumberOfHeartPieces);
+                Assert.AreEqual(0, heart.FilledHeartPieces);
             }
 
             [Test]
@@ -36,7 +36,7 @@ namespace TestEditor
             {
                 image.fillAmount = .25f;
 
-                Assert.AreEqual(1, heart.CurrentNumberOfHeartPieces);
+                Assert.AreEqual(1, heart.FilledHeartPieces);
             }
 
             [Test]
@@ -44,7 +44,7 @@ namespace TestEditor
             {
                 image.fillAmount = .5f;
 
-                Assert.AreEqual(2, heart.CurrentNumberOfHeartPieces);
+                Assert.AreEqual(2, heart.FilledHeartPieces);
             }
 
             [Test]
@@ -52,7 +52,7 @@ namespace TestEditor
             {
                 image.fillAmount = .75f;
 
-                Assert.AreEqual(3, heart.CurrentNumberOfHeartPieces);
+                Assert.AreEqual(3, heart.FilledHeartPieces);
             }
 
             [Test]
@@ -60,7 +60,7 @@ namespace TestEditor
             {
                 image.fillAmount = 1f;
 
-                Assert.AreEqual(4, heart.CurrentNumberOfHeartPieces);
+                Assert.AreEqual(4, heart.FilledHeartPieces);
             }
         }
 

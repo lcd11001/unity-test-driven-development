@@ -55,7 +55,7 @@ namespace TestEditor
                 heartContainer.Replenish(1);
 
                 Assert.AreEqual(0.25f, target.fillAmount);
-                Assert.AreEqual(0, heartContainer[1].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(0, heartContainer[1].FilledHeartPieces);
             }
 
             [Test]
@@ -68,8 +68,8 @@ namespace TestEditor
 
                 heartContainer.Replenish(5);
 
-                Assert.AreEqual(4, heartContainer[0].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(1, heartContainer[1].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(4, heartContainer[0].FilledHeartPieces);
+                Assert.AreEqual(1, heartContainer[1].FilledHeartPieces);
             }
 
             [Test]
@@ -83,9 +83,9 @@ namespace TestEditor
 
                 heartContainer.Replenish(10);
 
-                Assert.AreEqual(4, heartContainer[0].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(4, heartContainer[1].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(2, heartContainer[2].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(4, heartContainer[0].FilledHeartPieces);
+                Assert.AreEqual(4, heartContainer[1].FilledHeartPieces);
+                Assert.AreEqual(2, heartContainer[2].FilledHeartPieces);
             }
 
             [Test]
@@ -127,7 +127,7 @@ namespace TestEditor
                 heartContainer.Deplete(1);
 
                 Assert.AreEqual(1f, target.fillAmount);
-                Assert.AreEqual(3, heartContainer[1].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(3, heartContainer[1].FilledHeartPieces);
             }
 
             [Test]
@@ -141,8 +141,8 @@ namespace TestEditor
 
                 heartContainer.Deplete(5);
 
-                Assert.AreEqual(0, heartContainer[2].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(3, heartContainer[1].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(0, heartContainer[2].FilledHeartPieces);
+                Assert.AreEqual(3, heartContainer[1].FilledHeartPieces);
             }
 
             [Test]
@@ -156,9 +156,9 @@ namespace TestEditor
 
                 heartContainer.Deplete(10);
 
-                Assert.AreEqual(0, heartContainer[2].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(0, heartContainer[1].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(2, heartContainer[0].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(0, heartContainer[2].FilledHeartPieces);
+                Assert.AreEqual(0, heartContainer[1].FilledHeartPieces);
+                Assert.AreEqual(2, heartContainer[0].FilledHeartPieces);
             }
 
             [Test]

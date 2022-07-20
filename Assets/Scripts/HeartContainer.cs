@@ -17,7 +17,7 @@ public class HeartContainer
             var heart = hearts[i];
             
             heart.Replenish(numberOfHeartPieces);
-            numberOfHeartPieces -= (heart.CurrentNumberOfHeartPieces);
+            numberOfHeartPieces -= (heart.FilledHeartPieces);
             
             if (numberOfHeartPieces <= 0) break;
         }
@@ -30,7 +30,7 @@ public class HeartContainer
             var heart = hearts[i];
             
             heart.Deplete(numberOfHeartPieces);
-            numberOfHeartPieces -= (Heart.PIECES_PER_HEART - heart.CurrentNumberOfHeartPieces);
+            numberOfHeartPieces -= (Heart.PIECES_PER_HEART - heart.FilledHeartPieces);
             
             if (numberOfHeartPieces <= 0) break;
         }

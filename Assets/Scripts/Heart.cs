@@ -14,11 +14,17 @@ public class Heart
         this.image = image;
     }
 
-    public int CurrentNumberOfHeartPieces
+    public int FilledHeartPieces
     {
-        get => (int)(image.fillAmount * PIECES_PER_HEART);
-        set => image.fillAmount = value * FILL_PER_HEART_PIECE;
+        get => CalculateFilledHeartPieces();
     }
+
+    public int EmptyHeartPieces
+    {
+        get => PIECES_PER_HEART - CalculateFilledHeartPieces();
+    }
+
+    private int CalculateFilledHeartPieces() => (int)(image.fillAmount * PIECES_PER_HEART);
 
     public void Replenish(int numberOfHeartPieces)
     {
