@@ -3,13 +3,16 @@ using UnityEngine.UI;
 
 public class Heart
 {
-    private const float FILL_PER_HEART_PIECE = 0.25f;
+    private const int PIECES_PER_HEART = 4;
+    private const float FILL_PER_HEART_PIECE = 1.0f / PIECES_PER_HEART;
     private readonly Image image;
 
     public Heart(Image image)
     {
         this.image = image;
     }
+
+    public int CurrentNumberOfHeartPieces => (int)(image.fillAmount * PIECES_PER_HEART);
 
     public void Replenish(int numberOfHeartPieces)
     {

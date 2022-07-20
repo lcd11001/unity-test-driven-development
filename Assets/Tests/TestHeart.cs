@@ -21,6 +21,49 @@ namespace TestEditor
             heart = new Heart(image);
         }
 
+        public class TheCurrentNumberOfHeartPiecesProperty : TestHeart
+        {
+            [Test]
+            public void _1_image_fill_is_0_heart_pieces()
+            {
+                image.fillAmount = 0f;
+
+                Assert.AreEqual(0, heart.CurrentNumberOfHeartPieces);
+            }
+
+            [Test]
+            public void _2_image_fill_25_percent_is_1_heart_pieces()
+            {
+                image.fillAmount = .25f;
+
+                Assert.AreEqual(1, heart.CurrentNumberOfHeartPieces);
+            }
+
+            [Test]
+            public void _3_image_fill_50_percent_is_2_heart_pieces()
+            {
+                image.fillAmount = .5f;
+
+                Assert.AreEqual(2, heart.CurrentNumberOfHeartPieces);
+            }
+
+            [Test]
+            public void _4_image_fill_75_percent_is_3_heart_pieces()
+            {
+                image.fillAmount = .75f;
+
+                Assert.AreEqual(3, heart.CurrentNumberOfHeartPieces);
+            }
+
+            [Test]
+            public void _5_image_fill_100_percent_is_4_heart_pieces()
+            {
+                image.fillAmount = 1f;
+
+                Assert.AreEqual(4, heart.CurrentNumberOfHeartPieces);
+            }
+        }
+
         public class TheReplenishMethods : TestHeart
         {
             [Test]
