@@ -30,7 +30,7 @@ public class HeartContainer
             var heart = hearts[i];
             
             heart.Deplete(numberOfHeartPieces);
-            numberOfHeartPieces -= (Heart.PIECES_PER_HEART - heart.FilledHeartPieces);
+            numberOfHeartPieces -= heart.EmptyHeartPieces;
             
             if (numberOfHeartPieces <= 0) break;
         }

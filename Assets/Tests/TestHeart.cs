@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
+using TestEditor.Infrastructure;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
@@ -17,8 +18,8 @@ namespace TestEditor
         [SetUp]
         public void BeforeEveryTest()
         {
-            image = new GameObject().AddComponent<Image>();
-            heart = new Heart(image);
+            image = Builder.Image();
+            heart = Builder.Heart().WithImage(image);
         }
 
         public class TheFilledHeartPiecesProperty : TestHeart

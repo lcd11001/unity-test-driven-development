@@ -35,9 +35,11 @@ namespace TestEditor
             [Test]
             public void _1_empty_hearts_are_replenished()
             {
-                heartContainer = new HeartContainer(new List<Heart> {
-                    Builder.Heart().WithImage(target)
-                });
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart().WithImage(target)
+                    );
 
                 heartContainer.Replenish(1);
 
@@ -47,10 +49,13 @@ namespace TestEditor
             [Test]
             public void _2_hearts_are_replenished_in_order()
             {
-                heartContainer = new HeartContainer(new List<Heart> {
-                    Builder.Heart().WithImage(target),
-                    Builder.Heart()
-                });
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart().WithImage(target),
+                        Builder.Heart()
+                    );
+
 
                 heartContainer.Replenish(1);
 
@@ -61,10 +66,12 @@ namespace TestEditor
             [Test]
             public void _3_hearts_are_replenished_with_5_pieces()
             {
-                heartContainer = new HeartContainer(new List<Heart> {
-                    Builder.Heart(),
-                    Builder.Heart()
-                });
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart(),
+                        Builder.Heart()
+                    );
 
                 heartContainer.Replenish(5);
 
@@ -75,11 +82,13 @@ namespace TestEditor
             [Test]
             public void _4_hearts_are_replenished_with_10_pieces()
             {
-                heartContainer = new HeartContainer(new List<Heart> {
-                    Builder.Heart(),
-                    Builder.Heart(),
-                    Builder.Heart()
-                });
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart(),
+                        Builder.Heart(),
+                        Builder.Heart()
+                    );
 
                 heartContainer.Replenish(10);
 
@@ -107,9 +116,11 @@ namespace TestEditor
             [Test]
             public void _1_full_hearts_are_depleted()
             {
-                heartContainer = new HeartContainer(new List<Heart> {
-                    Builder.Heart().WithImage(target)
-                });
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart().WithImage(target)
+                    );
 
                 heartContainer.Deplete(1);
 
@@ -119,10 +130,12 @@ namespace TestEditor
             [Test]
             public void _2_hearts_are_depleted_in_order()
             {
-                heartContainer = new HeartContainer(new List<Heart> {
-                    Builder.Heart().WithImage(target),
-                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1))
-                });
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart().WithImage(target),
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1))
+                    );
 
                 heartContainer.Deplete(1);
 
@@ -133,11 +146,13 @@ namespace TestEditor
             [Test]
             public void _3_hearts_are_depleted_with_5_pieces()
             {
-                heartContainer = new HeartContainer(new List<Heart> {
-                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
-                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
-                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1))
-                });
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1))
+                    );
 
                 heartContainer.Deplete(5);
 
@@ -148,11 +163,13 @@ namespace TestEditor
             [Test]
             public void _4_hearts_are_depleted_with_10_pieces()
             {
-                heartContainer = new HeartContainer(new List<Heart> {
-                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
-                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
-                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1))
-                });
+                heartContainer = Builder
+                    .HeartContainer()
+                    .WithHeart(
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                        Builder.Heart().WithImage(Builder.Image().WithFillAmount(1))
+                    );
 
                 heartContainer.Deplete(10);
 

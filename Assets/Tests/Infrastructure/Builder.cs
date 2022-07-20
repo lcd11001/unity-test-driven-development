@@ -11,5 +11,10 @@ namespace TestEditor.Infrastructure
         {
             return new HeartBuilder();
         }
+
+        public static HeartContainerBuilder HeartContainer()
+        {
+            return new HeartContainerBuilder();
+        }
     }
 }
