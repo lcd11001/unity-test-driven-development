@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
@@ -66,6 +67,12 @@ namespace TestEditor
 
                 Assert.AreEqual(1f, image.fillAmount);
             }
+
+            [Test]
+            public void _6_throw_exception_for_negative_number_of_heart_pieces()
+            {
+                Assert.Throws<ArgumentException>(() => heart.Replenish(-1));
+            }
         }
 
         public class TheDepleteMethods : TestHeart
@@ -114,7 +121,15 @@ namespace TestEditor
 
                 Assert.AreEqual(0f, image.fillAmount);
             }
+
+            [Test]
+            public void _6_throw_exception_for_negative_number_of_heart_pieces()
+            {
+                Assert.Throws<ArgumentException>(() => heart.Deplete(-1));
+            }
         }
+
+
     }
 
 }

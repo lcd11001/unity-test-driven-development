@@ -13,11 +13,19 @@ public class Heart
 
     public void Replenish(int numberOfHeartPieces)
     {
+        if (numberOfHeartPieces < 0)
+        {
+            throw new ArgumentException("don't accept negative value", "numberOfHeartPieces");
+        }
         image.fillAmount += numberOfHeartPieces * FILL_PER_HEART_PIECE;
     }
 
     public void Deplete(int numberOfHeartPieces)
     {
+        if (numberOfHeartPieces < 0)
+        {
+            throw new ArgumentException("don't accept negative value", "numberOfHeartPieces");
+        }
         image.fillAmount -= numberOfHeartPieces * FILL_PER_HEART_PIECE;
     }
 }
