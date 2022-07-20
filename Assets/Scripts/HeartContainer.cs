@@ -12,20 +12,27 @@ public class HeartContainer
 
     public void Replenish(int numberOfHeartPieces)
     {
-        int numberOfHeartPiecesRemaining = numberOfHeartPieces;
-        foreach (var heart in hearts)
+        for (int i = 0, len = hearts.Count; i < len; i++)
         {
-            numberOfHeartPiecesRemaining -= (Heart.PIECES_PER_HEART - heart.CurrentNumberOfHeartPieces);
+            var heart = hearts[i];
+            
             heart.Replenish(numberOfHeartPieces);
-            if (numberOfHeartPiecesRemaining <= 0) break;
+            numberOfHeartPieces -= (heart.CurrentNumberOfHeartPieces);
+            
+            if (numberOfHeartPieces <= 0) break;
         }
     }
 
     public void Deplete(int numberOfHeartPieces)
     {
-        foreach (var heart in hearts)
+        for (int i = hearts.Count - 1; i > -1; i--)
         {
+            var heart = hearts[i];
+            
             heart.Deplete(numberOfHeartPieces);
+            numberOfHeartPieces -= (Heart.PIECES_PER_HEART - heart.CurrentNumberOfHeartPieces);
+            
+            if (numberOfHeartPieces <= 0) break;
         }
     }
 }
