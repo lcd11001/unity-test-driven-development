@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
+using TestEditor.Infrastructure;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
@@ -11,32 +12,15 @@ namespace TestEditor
 
     public class TestHeartContainer
     {
-        private List<Heart> hearts = new List<Heart>();
+        private Image target;
         private float targetFill;
-        private const int NUMBER_OF_HEART = 4;
-
-        private Image targetHead, targetTail;
 
         private HeartContainer heartContainer;
 
         [SetUp]
         public virtual void BeforeEveryTest()
         {
-            hearts.Clear();
-
-            for (int i = 0; i < NUMBER_OF_HEART; i++)
-            {
-                var target = new GameObject().AddComponent<Image>();
-                target.fillAmount = targetFill;
-
-                if (i == 0) targetHead = target;
-                else if (i == NUMBER_OF_HEART - 1) targetTail = target;
-
-                var heart = new Heart(target);
-                hearts.Add(heart);
-            }
-
-            heartContainer = new HeartContainer(hearts);
+            target = Builder.Image().WithFillAmount(targetFill);
         }
 
         public class TheReplenishMethods : TestHeartContainer
@@ -51,37 +35,57 @@ namespace TestEditor
             [Test]
             public void _1_empty_hearts_are_replenished()
             {
+                heartContainer = new HeartContainer(new List<Heart> {
+                    Builder.Heart().WithImage(target)
+                });
+
                 heartContainer.Replenish(1);
 
-                Assert.AreEqual(0.25f, targetHead.fillAmount);
+                Assert.AreEqual(0.25f, target.fillAmount);
             }
 
             [Test]
             public void _2_hearts_are_replenished_in_order()
             {
+                heartContainer = new HeartContainer(new List<Heart> {
+                    Builder.Heart().WithImage(target),
+                    Builder.Heart()
+                });
+
                 heartContainer.Replenish(1);
 
-                Assert.AreEqual(0.25f, targetHead.fillAmount);
-                Assert.AreEqual(0f, targetTail.fillAmount);
+                Assert.AreEqual(0.25f, target.fillAmount);
+                Assert.AreEqual(0, heartContainer[1].CurrentNumberOfHeartPieces);
             }
 
             [Test]
             public void _3_hearts_are_replenished_with_5_pieces()
             {
+                heartContainer = new HeartContainer(new List<Heart> {
+                    Builder.Heart(),
+                    Builder.Heart()
+                });
+
                 heartContainer.Replenish(5);
 
-                Assert.AreEqual(4, hearts[0].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(1, hearts[1].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(4, heartContainer[0].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(1, heartContainer[1].CurrentNumberOfHeartPieces);
             }
 
             [Test]
             public void _4_hearts_are_replenished_with_10_pieces()
             {
+                heartContainer = new HeartContainer(new List<Heart> {
+                    Builder.Heart(),
+                    Builder.Heart(),
+                    Builder.Heart()
+                });
+
                 heartContainer.Replenish(10);
 
-                Assert.AreEqual(4, hearts[0].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(4, hearts[1].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(2, hearts[2].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(4, heartContainer[0].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(4, heartContainer[1].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(2, heartContainer[2].CurrentNumberOfHeartPieces);
             }
 
             [Test]
@@ -103,37 +107,58 @@ namespace TestEditor
             [Test]
             public void _1_full_hearts_are_depleted()
             {
+                heartContainer = new HeartContainer(new List<Heart> {
+                    Builder.Heart().WithImage(target)
+                });
+
                 heartContainer.Deplete(1);
 
-                Assert.AreEqual(0.75f, targetTail.fillAmount);
+                Assert.AreEqual(0.75f, target.fillAmount);
             }
 
             [Test]
             public void _2_hearts_are_depleted_in_order()
             {
+                heartContainer = new HeartContainer(new List<Heart> {
+                    Builder.Heart().WithImage(target),
+                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1))
+                });
+
                 heartContainer.Deplete(1);
 
-                Assert.AreEqual(1f, targetHead.fillAmount);
-                Assert.AreEqual(0.75f, targetTail.fillAmount);
+                Assert.AreEqual(1f, target.fillAmount);
+                Assert.AreEqual(3, heartContainer[1].CurrentNumberOfHeartPieces);
             }
 
             [Test]
             public void _3_hearts_are_depleted_with_5_pieces()
             {
+                heartContainer = new HeartContainer(new List<Heart> {
+                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1))
+                });
+
                 heartContainer.Deplete(5);
 
-                Assert.AreEqual(0, hearts[NUMBER_OF_HEART - 1].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(3, hearts[NUMBER_OF_HEART - 2].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(0, heartContainer[2].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(3, heartContainer[1].CurrentNumberOfHeartPieces);
             }
 
             [Test]
             public void _4_hearts_are_depleted_with_10_pieces()
             {
+                heartContainer = new HeartContainer(new List<Heart> {
+                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1)),
+                    Builder.Heart().WithImage(Builder.Image().WithFillAmount(1))
+                });
+
                 heartContainer.Deplete(10);
 
-                Assert.AreEqual(0, hearts[NUMBER_OF_HEART - 1].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(0, hearts[NUMBER_OF_HEART - 2].CurrentNumberOfHeartPieces);
-                Assert.AreEqual(2, hearts[NUMBER_OF_HEART - 3].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(0, heartContainer[2].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(0, heartContainer[1].CurrentNumberOfHeartPieces);
+                Assert.AreEqual(2, heartContainer[0].CurrentNumberOfHeartPieces);
             }
 
             [Test]

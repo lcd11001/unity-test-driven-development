@@ -35,4 +35,9 @@ public class HeartContainer
             if (numberOfHeartPieces <= 0) break;
         }
     }
+
+    public Heart this[int index]
+    {
+        get => hearts[index];
+    }
 }
