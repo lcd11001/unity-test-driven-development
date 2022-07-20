@@ -15,4 +15,9 @@ public class Heart
     {
         image.fillAmount += numberOfHeartPieces * FILL_PER_HEART_PIECE;
     }
+
+    public void Deplete(int numberOfHeartPieces)
+    {
+        image.fillAmount -= numberOfHeartPieces * FILL_PER_HEART_PIECE;
+    }
 }
