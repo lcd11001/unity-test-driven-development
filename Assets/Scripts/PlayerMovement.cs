@@ -9,9 +9,15 @@ public class PlayerMovement : MonoBehaviour
 
     private Movement movement;
 
+    public IUnityService unityService;
+
     void Start()
     {
         movement = new Movement(speed);
+        if (unityService == null)
+        {
+            unityService = new UnityService();
+        }
     }
 
     void Update()
@@ -19,9 +25,9 @@ public class PlayerMovement : MonoBehaviour
         // Input & Time can not access from unit test
         // so that, we refactor the code
 
-        var h = Input.GetAxis("Horizontal");
-        var v = Input.GetAxis("Vertical");
-        float deltaTime = Time.deltaTime;
+        var h = unityService.GetAxisInput("Horizontal");
+        var v = unityService.GetAxisInput("Vertical");
+        float deltaTime = unityService.GetDeltaTime();
 
         transform.position += movement.Caculate(h, v, deltaTime);
     }
