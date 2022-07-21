@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
+[DefaultExecutionOrder(999)]
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
@@ -14,14 +15,14 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Image image;
 
+    [SerializeField]
+    private PlayerObject playerObject;
+
     private Heart heart;
     private HeartContainer heartContainer;
-    private Player player;
 
     void Awake()
     {
-        player = new Player(20, 20);
-
         heart = new Heart(image);
 
         heartContainer = new HeartContainer(
@@ -30,23 +31,7 @@ public class GameManager : MonoBehaviour
                 .ToList()
         );
 
-        player.OnHealed += (sender, args) => heartContainer.Replenish(args.Amount);
-        player.OnDamaged += (sender, args) => heartContainer.Deplete(args.Amount);
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            // heart.Replenish(amount);
-            // heartContainer.Replenish(amount);
-            player.Heal(amount);
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            // heart.Deplete(amount);
-            // heartContainer.Deplete(amount);
-            player.Damage(amount);
-        }
+        playerObject.Player.OnHealed += (sender, args) => heartContainer.Replenish(args.Amount);
+        playerObject.Player.OnDamaged += (sender, args) => heartContainer.Deplete(args.Amount);
     }
 }
