@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 63
+  controlID: 50
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 457
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,15 +120,15 @@ MonoBehaviour:
     y: 457
     width: 1466
     height: 490
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 51
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 82
+  controlID: 52
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +306,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 11670
+    ID: 631
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -337,9 +337,9 @@ MonoBehaviour:
       uniqueId: '[TDD][suite]'
       name: TDD
       fullName: TDD
-      resultStatus: 2
-      duration: 5.191942
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.3127116
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -353,9 +353,9 @@ MonoBehaviour:
       uniqueId: '[PlayTests.dll][suite]'
       name: PlayTests.dll
       fullName: G:/Projects/Unity/Training/TDD/Library/ScriptAssemblies/PlayTests.dll
-      resultStatus: 2
-      duration: 5.0787997
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.2004998
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -369,9 +369,9 @@ MonoBehaviour:
       uniqueId: PlayTests.dll/[PlayTests][TestEditor][suite]
       name: TestEditor
       fullName: TestEditor
-      resultStatus: 2
-      duration: 5.0722623
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1935796
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -385,9 +385,9 @@ MonoBehaviour:
       uniqueId: PlayTests.dll/TestEditor/[PlayTests][TestEditor.TestPlayerMovement][suite]
       name: TestPlayerMovement
       fullName: TestEditor.TestPlayerMovement
-      resultStatus: 2
-      duration: 5.0693417
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1906053
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -401,21 +401,11 @@ MonoBehaviour:
       uniqueId: PlayTests.dll/TestEditor/TestPlayerMovement/[PlayTests][TestEditor.TestPlayerMovement.move_along_x_axis_for_horizontal_input]
       name: move_along_x_axis_for_horizontal_input
       fullName: TestEditor.TestPlayerMovement.move_along_x_axis_for_horizontal_input
-      resultStatus: 2
-      duration: 5.0520945
-      messages: "  Expected: 0.083333337679505348d +/- 0.10000000149011612d\r\n 
-        But was:  29.816383361816406d\r\n"
-      output: 'frame count NSubstitute.Core.ConfiguredCall
-
-'
-      stacktrace: 'at TestEditor.TestPlayerMovement+<move_along_x_axis_for_horizontal_input>d__0.MoveNext
-        () [0x000f1] in G:\Projects\Unity\Training\TDD\Assets\PlayTests\TestPlayerMovement.cs:35
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in G:\Projects\Unity\Training\TDD\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
+      resultStatus: 1
+      duration: 0.1455641
+      messages: 
+      output: 
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -429,7 +419,7 @@ MonoBehaviour:
       name: move_along_z_axis_for_vertical_input
       fullName: TestEditor.TestPlayerMovement.move_along_z_axis_for_vertical_input
       resultStatus: 1
-      duration: 0.0192174
+      duration: 0.0314845
       messages: 
       output: 
       stacktrace: 
@@ -441,21 +431,8 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1008
       parentUniqueId: PlayTests.dll/TestEditor/[PlayTests][TestEditor.TestPlayerMovement][suite]
-    m_ResultText: "move_along_x_axis_for_horizontal_input (5.052s)\n---\nExpected:
-      0.083333337679505348d +/- 0.10000000149011612d\r\n  But was:  29.816383361816406d\n---\nat
-      TestEditor.TestPlayerMovement+<move_along_x_axis_for_horizontal_input>d__0.MoveNext
-      () [0x000f1] in G:\\Projects\\Unity\\Training\\TDD\\Assets\\PlayTests\\TestPlayerMovement.cs:35\r\nat
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
-      G:\\Projects\\Unity\\Training\\TDD\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46\n---\nframe
-      count NSubstitute.Core.ConfiguredCall"
-    m_ResultStacktrace: 'at TestEditor.TestPlayerMovement+<move_along_x_axis_for_horizontal_input>d__0.MoveNext
-      () [0x000f1] in G:\Projects\Unity\Training\TDD\Assets\PlayTests\TestPlayerMovement.cs:35
-
-      at
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
-      G:\Projects\Unity\Training\TDD\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
+    m_ResultText: move_along_x_axis_for_horizontal_input (0.146s)
+    m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 431baf80
@@ -1500,7 +1477,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 8e8c0000
     m_LastClickedID: 35982
-    m_ExpandedIDs: 00000000de590000aa5a000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000ba5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1528,7 +1505,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de590000
+    m_ExpandedIDs: 00000000ba5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1599,7 +1576,7 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Debug
+    m_Text: Inspector
     m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
@@ -1621,7 +1598,7 @@ MonoBehaviour:
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
-  m_InspectorMode: 1
+  m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
@@ -1658,7 +1635,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 36dbfeff74dbfeffd6dcfeffccddfeff0adefeff54dffeff46e0feff84e0feffcee1feff04e3feff44e3feff7ce4feff38e5feff78e5feffd6e6feffa8e7feffe8e7feff38e9feff8ae9feffcae9feff1aebfeff80ebfeffc0ebfeff10edfefffeedfeff3eeefeff8eeffeff20f0feff60f0feffb0f1feff98f3feffd8f3feff2af5feff62f6feffb2f6feff38f8feff46f9feff96f9fefffcfafeff4cfbfeff9cfbfefffcfcfeffd8fdfeff28fefeff88fffeff0c00ffff5c00ffffbc01ffffa402fffff402ffff5404ffffd804ffff1805ffff5606ffffaa0bffff1216ffff0e1affffac32ffff4039fffff63dffff183effff223fffffea43ffffba48ffff5e4affff644bffff644cffff824dffff864effff8c4fffff9650ffff9e51ffffa852ffffae53ffff1c54ffff2c55ffff2656ffff1e57ffff6c59ffff805cffff6860ffff8661ffffa064ffffc669ffff5c6dfffffa71ffff6676fffffe79ffff9e7dffff7081ffff3084ffffc487ffff4c8bffffe48effff1290ffffa490ffffa893ffff4497ffff249affffdc9cffff989fffff58a2ffffc8a3ffff3ea5ffffc4a6ffff4aa7ffff9ca8ffff4ea9ffffe4a9ffffeaaaffff98abffffb4aeffff7eafffff60b0ffff3eb1ffff4ab3ffffcab5ffffa8b6ffff1cb8ffff2eb9ffff1cbaffff02bbffff16bdffff58befffff8befffff8c0ffff4cc3ffffb0c5ffff2cc9ffff94ccffff4ccdffff5aceffff70cfffff20d3ffff10d8ffffd2d8ffff82daffff2edcffffe2ddffff70dffffffee0ffff42e2ffff0ae4ffff48e5ffff82e6ffffc8e7ffff42e9ffff64eaffff6cebffff9cf2ffff34faffff36fbffff745e0000885e000086780000b2780000ba780000f6860000
+      m_ExpandedIDs: 50ebffff90ebffffc8ecffff0aedffff1ceeffff5ceeffff88efffff5ef0ffff9ef0ffffcaf1ffff88f2ffffc8f2fffff6f3ffff32fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
