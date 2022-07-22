@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
+    x: 1920
     y: 43
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 105
+  controlID: 63
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,13 +68,12 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
-  - {fileID: 12}
-  m_Selected: 1
+  m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -94,7 +93,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 363
-    height: 561
+    height: 457
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
@@ -112,23 +111,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 561
+    y: 457
     width: 1466
-    height: 386
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+    height: 490
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 12}
+  m_Selected: 1
+  m_LastSelected: 2
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 95
+  controlID: 17
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,11 +245,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1466
-    height: 561
+    height: 457
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 96
+  controlID: 82
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,9 +268,9 @@ MonoBehaviour:
     x: 363
     y: 0
     width: 1103
-    height: 561
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+    height: 457
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
@@ -297,21 +297,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1466
-    y: 73
-    width: 453
-    height: 926
+    x: 1920
+    y: 530
+    width: 1465
+    height: 469
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 231
+    ID: 11670
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 642
-    - 214
+    - 299
+    - 100
     relativeSizes:
     - 0.75
     - 0.25
@@ -321,7 +321,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 856
+    lastTotalSize: 399
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -329,17 +329,138 @@ MonoBehaviour:
     oldMinSizes: 
     oldMaxSizes: 
     oldSplitSize: 0
-  m_TestTypeToolbarIndex: 1
+  m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 0}
-    m_NewResultList: []
-    m_ResultText: 
-    m_ResultStacktrace: 
+    m_Window: {fileID: 12}
+    m_NewResultList:
+    - id: 1059
+      uniqueId: '[TDD][suite]'
+      name: TDD
+      fullName: TDD
+      resultStatus: 2
+      duration: 5.191942
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1004
+      uniqueId: '[PlayTests.dll][suite]'
+      name: PlayTests.dll
+      fullName: G:/Projects/Unity/Training/TDD/Library/ScriptAssemblies/PlayTests.dll
+      resultStatus: 2
+      duration: 5.0787997
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[TDD][suite]'
+    - id: 1005
+      uniqueId: PlayTests.dll/[PlayTests][TestEditor][suite]
+      name: TestEditor
+      fullName: TestEditor
+      resultStatus: 2
+      duration: 5.0722623
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1004
+      parentUniqueId: '[PlayTests.dll][suite]'
+    - id: 1001
+      uniqueId: PlayTests.dll/TestEditor/[PlayTests][TestEditor.TestPlayerMovement][suite]
+      name: TestPlayerMovement
+      fullName: TestEditor.TestPlayerMovement
+      resultStatus: 2
+      duration: 5.0693417
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1005
+      parentUniqueId: PlayTests.dll/[PlayTests][TestEditor][suite]
+    - id: 1002
+      uniqueId: PlayTests.dll/TestEditor/TestPlayerMovement/[PlayTests][TestEditor.TestPlayerMovement.move_along_x_axis_for_horizontal_input]
+      name: move_along_x_axis_for_horizontal_input
+      fullName: TestEditor.TestPlayerMovement.move_along_x_axis_for_horizontal_input
+      resultStatus: 2
+      duration: 5.0520945
+      messages: "  Expected: 0.083333337679505348d +/- 0.10000000149011612d\r\n 
+        But was:  29.816383361816406d\r\n"
+      output: 'frame count NSubstitute.Core.ConfiguredCall
+
+'
+      stacktrace: 'at TestEditor.TestPlayerMovement+<move_along_x_axis_for_horizontal_input>d__0.MoveNext
+        () [0x000f1] in G:\Projects\Unity\Training\TDD\Assets\PlayTests\TestPlayerMovement.cs:35
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in G:\Projects\Unity\Training\TDD\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayTests.dll/TestEditor/[PlayTests][TestEditor.TestPlayerMovement][suite]
+    - id: 1010
+      uniqueId: PlayTests.dll/TestEditor/TestPlayerMovement/[PlayTests][TestEditor.TestPlayerMovement.move_along_z_axis_for_vertical_input]
+      name: move_along_z_axis_for_vertical_input
+      fullName: TestEditor.TestPlayerMovement.move_along_z_axis_for_vertical_input
+      resultStatus: 1
+      duration: 0.0192174
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: PlayTests.dll/TestEditor/[PlayTests][TestEditor.TestPlayerMovement][suite]
+    m_ResultText: "move_along_x_axis_for_horizontal_input (5.052s)\n---\nExpected:
+      0.083333337679505348d +/- 0.10000000149011612d\r\n  But was:  29.816383361816406d\n---\nat
+      TestEditor.TestPlayerMovement+<move_along_x_axis_for_horizontal_input>d__0.MoveNext
+      () [0x000f1] in G:\\Projects\\Unity\\Training\\TDD\\Assets\\PlayTests\\TestPlayerMovement.cs:35\r\nat
+      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
+      G:\\Projects\\Unity\\Training\\TDD\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46\n---\nframe
+      count NSubstitute.Core.ConfiguredCall"
+    m_ResultStacktrace: 'at TestEditor.TestPlayerMovement+<move_along_x_axis_for_horizontal_input>d__0.MoveNext
+      () [0x000f1] in G:\Projects\Unity\Training\TDD\Assets\PlayTests\TestPlayerMovement.cs:35
+
+      at
+      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
+      G:\Projects\Unity\Training\TDD\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 
+      m_SelectedIDs: 431baf80
+      m_LastClickedID: -2136007869
+      m_ExpandedIDs: 050048898aabf1cd98d56d2d5248c052ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -363,7 +484,8 @@ MonoBehaviour:
       NotRunHidden: 0
       m_SearchString: 
       selectedCategoryMask: 0
-      availableCategories: []
+      availableCategories:
+      - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
     m_Window: {fileID: 12}
@@ -373,7 +495,7 @@ MonoBehaviour:
       name: TDD
       fullName: TDD
       resultStatus: 1
-      duration: 0.0978848
+      duration: 0.0753286
       messages: 
       output: 
       stacktrace: 
@@ -384,12 +506,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1033
+    - id: 1007
       uniqueId: '[Tests.dll][suite]'
       name: Tests.dll
-      fullName: E:/Projects/_Unity/_Training/TDD/Library/ScriptAssemblies/Tests.dll
+      fullName: G:/Projects/Unity/Training/TDD/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.074656
+      duration: 0.0395338
       messages: 
       output: 
       stacktrace: 
@@ -400,12 +522,12 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[TDD][suite]'
-    - id: 1034
+    - id: 1014
       uniqueId: Tests.dll/[Tests][TestEditor][suite]
       name: TestEditor
       fullName: TestEditor
       resultStatus: 1
-      duration: 0.073762
+      duration: 0.036621
       messages: 
       output: 
       stacktrace: 
@@ -414,14 +536,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1033
+      parentId: 1013
       parentUniqueId: '[Tests.dll][suite]'
-    - id: 1014
+    - id: 1007
       uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheDepleteMethods][suite]
       name: TestHeart+TheDepleteMethods
       fullName: TestEditor.TestHeart+TheDepleteMethods
-      resultStatus: 1
-      duration: 0.0344051
+      resultStatus: 0
+      duration: 0.0381442
       messages: 
       output: 
       stacktrace: 
@@ -430,14 +552,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1034
+      parentId: 1014
       parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
-    - id: 1015
+    - id: 1008
       uniqueId: Tests.dll/TestEditor/TestHeart+TheDepleteMethods/[Tests][TestEditor.TestHeart+TheDepleteMethods._1_set_image_with_100_fill_to_100_percent_fill]
       name: _1_set_image_with_100_fill_to_100_percent_fill
       fullName: TestEditor.TestHeart+TheDepleteMethods._1_set_image_with_100_fill_to_100_percent_fill
-      resultStatus: 1
-      duration: 0.0163386
+      resultStatus: 0
+      duration: 0.0184014
       messages: 
       output: 
       stacktrace: 
@@ -447,14 +569,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1014
+      parentId: 1007
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheDepleteMethods][suite]
-    - id: 1016
+    - id: 1009
       uniqueId: Tests.dll/TestEditor/TestHeart+TheDepleteMethods/[Tests][TestEditor.TestHeart+TheDepleteMethods._2_set_image_with_100_fill_to_75_percent_fill]
       name: _2_set_image_with_100_fill_to_75_percent_fill
       fullName: TestEditor.TestHeart+TheDepleteMethods._2_set_image_with_100_fill_to_75_percent_fill
-      resultStatus: 1
-      duration: 0.0004329
+      resultStatus: 0
+      duration: 0.0004416
       messages: 
       output: 
       stacktrace: 
@@ -464,14 +586,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1014
+      parentId: 1007
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheDepleteMethods][suite]
-    - id: 1017
+    - id: 1010
       uniqueId: Tests.dll/TestEditor/TestHeart+TheDepleteMethods/[Tests][TestEditor.TestHeart+TheDepleteMethods._3_set_image_with_75_fill_to_50_percent_fill]
       name: _3_set_image_with_75_fill_to_50_percent_fill
       fullName: TestEditor.TestHeart+TheDepleteMethods._3_set_image_with_75_fill_to_50_percent_fill
-      resultStatus: 1
-      duration: 0.0003297
+      resultStatus: 0
+      duration: 0.0002997
       messages: 
       output: 
       stacktrace: 
@@ -481,14 +603,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1014
+      parentId: 1007
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheDepleteMethods][suite]
-    - id: 1018
+    - id: 1011
       uniqueId: Tests.dll/TestEditor/TestHeart+TheDepleteMethods/[Tests][TestEditor.TestHeart+TheDepleteMethods._4_set_image_with_50_fill_to_25_percent_fill]
       name: _4_set_image_with_50_fill_to_25_percent_fill
       fullName: TestEditor.TestHeart+TheDepleteMethods._4_set_image_with_50_fill_to_25_percent_fill
-      resultStatus: 1
-      duration: 0.000333
+      resultStatus: 0
+      duration: 0.0002917
       messages: 
       output: 
       stacktrace: 
@@ -498,14 +620,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1014
+      parentId: 1007
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheDepleteMethods][suite]
-    - id: 1019
+    - id: 1012
       uniqueId: Tests.dll/TestEditor/TestHeart+TheDepleteMethods/[Tests][TestEditor.TestHeart+TheDepleteMethods._5_set_image_with_25_fill_to_0_percent_fill]
       name: _5_set_image_with_25_fill_to_0_percent_fill
       fullName: TestEditor.TestHeart+TheDepleteMethods._5_set_image_with_25_fill_to_0_percent_fill
-      resultStatus: 1
-      duration: 0.0003184
+      resultStatus: 0
+      duration: 0.0002964
       messages: 
       output: 
       stacktrace: 
@@ -515,14 +637,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1014
+      parentId: 1007
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheDepleteMethods][suite]
-    - id: 1020
+    - id: 1014
       uniqueId: Tests.dll/TestEditor/TestHeart+TheDepleteMethods/[Tests][TestEditor.TestHeart+TheDepleteMethods._6_throw_exception_for_negative_number_of_heart_pieces]
       name: _6_throw_exception_for_negative_number_of_heart_pieces
       fullName: TestEditor.TestHeart+TheDepleteMethods._6_throw_exception_for_negative_number_of_heart_pieces
-      resultStatus: 1
-      duration: 0.0028851
+      resultStatus: 0
+      duration: 0.0034051
       messages: 
       output: 
       stacktrace: 
@@ -532,14 +654,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1014
+      parentId: 1008
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheDepleteMethods][suite]
     - id: 1001
       uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheFilledHeartPiecesProperty][suite]
       name: TestHeart+TheFilledHeartPiecesProperty
       fullName: TestEditor.TestHeart+TheFilledHeartPiecesProperty
-      resultStatus: 1
-      duration: 0.0094587
+      resultStatus: 0
+      duration: 0.0133235
       messages: 
       output: 
       stacktrace: 
@@ -548,14 +670,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1034
+      parentId: 1036
       parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
     - id: 1002
       uniqueId: Tests.dll/TestEditor/TestHeart+TheFilledHeartPiecesProperty/[Tests][TestEditor.TestHeart+TheFilledHeartPiecesProperty._1_image_fill_is_0_heart_pieces]
       name: _1_image_fill_is_0_heart_pieces
       fullName: TestEditor.TestHeart+TheFilledHeartPiecesProperty._1_image_fill_is_0_heart_pieces
-      resultStatus: 1
-      duration: 0.0011509
+      resultStatus: 0
+      duration: 0.0014955
       messages: 
       output: 
       stacktrace: 
@@ -571,8 +693,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeart+TheFilledHeartPiecesProperty/[Tests][TestEditor.TestHeart+TheFilledHeartPiecesProperty._2_image_fill_25_percent_is_1_heart_pieces]
       name: _2_image_fill_25_percent_is_1_heart_pieces
       fullName: TestEditor.TestHeart+TheFilledHeartPiecesProperty._2_image_fill_25_percent_is_1_heart_pieces
-      resultStatus: 1
-      duration: 0.0003811
+      resultStatus: 0
+      duration: 0.0009666
       messages: 
       output: 
       stacktrace: 
@@ -588,8 +710,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeart+TheFilledHeartPiecesProperty/[Tests][TestEditor.TestHeart+TheFilledHeartPiecesProperty._3_image_fill_50_percent_is_2_heart_pieces]
       name: _3_image_fill_50_percent_is_2_heart_pieces
       fullName: TestEditor.TestHeart+TheFilledHeartPiecesProperty._3_image_fill_50_percent_is_2_heart_pieces
-      resultStatus: 1
-      duration: 0.0003494
+      resultStatus: 0
+      duration: 0.0004268
       messages: 
       output: 
       stacktrace: 
@@ -605,8 +727,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeart+TheFilledHeartPiecesProperty/[Tests][TestEditor.TestHeart+TheFilledHeartPiecesProperty._4_image_fill_75_percent_is_3_heart_pieces]
       name: _4_image_fill_75_percent_is_3_heart_pieces
       fullName: TestEditor.TestHeart+TheFilledHeartPiecesProperty._4_image_fill_75_percent_is_3_heart_pieces
-      resultStatus: 1
-      duration: 0.0003303
+      resultStatus: 0
+      duration: 0.0002981
       messages: 
       output: 
       stacktrace: 
@@ -622,8 +744,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeart+TheFilledHeartPiecesProperty/[Tests][TestEditor.TestHeart+TheFilledHeartPiecesProperty._5_image_fill_100_percent_is_4_heart_pieces]
       name: _5_image_fill_100_percent_is_4_heart_pieces
       fullName: TestEditor.TestHeart+TheFilledHeartPiecesProperty._5_image_fill_100_percent_is_4_heart_pieces
-      resultStatus: 1
-      duration: 0.0003629
+      resultStatus: 0
+      duration: 0.0002952
       messages: 
       output: 
       stacktrace: 
@@ -635,12 +757,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheFilledHeartPiecesProperty][suite]
-    - id: 1007
+    - id: 1001
       uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheReplenishMethods][suite]
       name: TestHeart+TheReplenishMethods
       fullName: TestEditor.TestHeart+TheReplenishMethods
-      resultStatus: 1
-      duration: 0.0070846
+      resultStatus: 0
+      duration: 0.0111703
       messages: 
       output: 
       stacktrace: 
@@ -649,14 +771,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1034
+      parentId: 1014
       parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
-    - id: 1008
+    - id: 1002
       uniqueId: Tests.dll/TestEditor/TestHeart+TheReplenishMethods/[Tests][TestEditor.TestHeart+TheReplenishMethods._1_set_image_with_0_fill_to_0_percent_fill]
       name: _1_set_image_with_0_fill_to_0_percent_fill
       fullName: TestEditor.TestHeart+TheReplenishMethods._1_set_image_with_0_fill_to_0_percent_fill
-      resultStatus: 1
-      duration: 0.0007479
+      resultStatus: 0
+      duration: 0.0016704
       messages: 
       output: 
       stacktrace: 
@@ -666,14 +788,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1007
+      parentId: 1001
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheReplenishMethods][suite]
-    - id: 1009
+    - id: 1003
       uniqueId: Tests.dll/TestEditor/TestHeart+TheReplenishMethods/[Tests][TestEditor.TestHeart+TheReplenishMethods._2_set_image_with_0_fill_to_25_percent_fill]
       name: _2_set_image_with_0_fill_to_25_percent_fill
       fullName: TestEditor.TestHeart+TheReplenishMethods._2_set_image_with_0_fill_to_25_percent_fill
-      resultStatus: 1
-      duration: 0.000347
+      resultStatus: 0
+      duration: 0.0006999
       messages: 
       output: 
       stacktrace: 
@@ -683,14 +805,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1007
+      parentId: 1001
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheReplenishMethods][suite]
-    - id: 1010
+    - id: 1004
       uniqueId: Tests.dll/TestEditor/TestHeart+TheReplenishMethods/[Tests][TestEditor.TestHeart+TheReplenishMethods._3_set_image_with_25_fill_to_50_percent_fill]
       name: _3_set_image_with_25_fill_to_50_percent_fill
       fullName: TestEditor.TestHeart+TheReplenishMethods._3_set_image_with_25_fill_to_50_percent_fill
-      resultStatus: 1
-      duration: 0.0003393
+      resultStatus: 0
+      duration: 0.0004331
       messages: 
       output: 
       stacktrace: 
@@ -700,14 +822,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1007
+      parentId: 1001
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheReplenishMethods][suite]
-    - id: 1011
+    - id: 1005
       uniqueId: Tests.dll/TestEditor/TestHeart+TheReplenishMethods/[Tests][TestEditor.TestHeart+TheReplenishMethods._4_set_image_with_50_fill_to_75_percent_fill]
       name: _4_set_image_with_50_fill_to_75_percent_fill
       fullName: TestEditor.TestHeart+TheReplenishMethods._4_set_image_with_50_fill_to_75_percent_fill
-      resultStatus: 1
-      duration: 0.0003282
+      resultStatus: 0
+      duration: 0.0010484
       messages: 
       output: 
       stacktrace: 
@@ -717,14 +839,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1007
+      parentId: 1001
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheReplenishMethods][suite]
-    - id: 1012
+    - id: 1006
       uniqueId: Tests.dll/TestEditor/TestHeart+TheReplenishMethods/[Tests][TestEditor.TestHeart+TheReplenishMethods._5_set_image_with_75_fill_to_100_percent_fill]
       name: _5_set_image_with_75_fill_to_100_percent_fill
       fullName: TestEditor.TestHeart+TheReplenishMethods._5_set_image_with_75_fill_to_100_percent_fill
-      resultStatus: 1
-      duration: 0.0003332
+      resultStatus: 0
+      duration: 0.0004309
       messages: 
       output: 
       stacktrace: 
@@ -734,14 +856,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1007
+      parentId: 1001
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheReplenishMethods][suite]
-    - id: 1013
+    - id: 1007
       uniqueId: Tests.dll/TestEditor/TestHeart+TheReplenishMethods/[Tests][TestEditor.TestHeart+TheReplenishMethods._6_throw_exception_for_negative_number_of_heart_pieces]
       name: _6_throw_exception_for_negative_number_of_heart_pieces
       fullName: TestEditor.TestHeart+TheReplenishMethods._6_throw_exception_for_negative_number_of_heart_pieces
-      resultStatus: 1
-      duration: 0.0004236
+      resultStatus: 0
+      duration: 0.000375
       messages: 
       output: 
       stacktrace: 
@@ -751,14 +873,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1007
+      parentId: 1001
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeart+TheReplenishMethods][suite]
-    - id: 1027
+    - id: 1022
       uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeartContainer+TheDepleteMethods][suite]
       name: TestHeartContainer+TheDepleteMethods
       fullName: TestEditor.TestHeartContainer+TheDepleteMethods
-      resultStatus: 1
-      duration: 0.0116412
+      resultStatus: 0
+      duration: 0.0146811
       messages: 
       output: 
       stacktrace: 
@@ -767,14 +889,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1034
+      parentId: 1030
       parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
     - id: 1028
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheDepleteMethods/[Tests][TestEditor.TestHeartContainer+TheDepleteMethods._1_full_hearts_are_depleted]
       name: _1_full_hearts_are_depleted
       fullName: TestEditor.TestHeartContainer+TheDepleteMethods._1_full_hearts_are_depleted
-      resultStatus: 1
-      duration: 0.0018878
+      resultStatus: 0
+      duration: 0.0016985
       messages: 
       output: 
       stacktrace: 
@@ -790,8 +912,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheDepleteMethods/[Tests][TestEditor.TestHeartContainer+TheDepleteMethods._2_hearts_are_depleted_in_order]
       name: _2_hearts_are_depleted_in_order
       fullName: TestEditor.TestHeartContainer+TheDepleteMethods._2_hearts_are_depleted_in_order
-      resultStatus: 1
-      duration: 0.000898
+      resultStatus: 0
+      duration: 0.0015335
       messages: 
       output: 
       stacktrace: 
@@ -807,8 +929,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheDepleteMethods/[Tests][TestEditor.TestHeartContainer+TheDepleteMethods._3_hearts_are_depleted_with_5_pieces]
       name: _3_hearts_are_depleted_with_5_pieces
       fullName: TestEditor.TestHeartContainer+TheDepleteMethods._3_hearts_are_depleted_with_5_pieces
-      resultStatus: 1
-      duration: 0.0011189
+      resultStatus: 0
+      duration: 0.0013147
       messages: 
       output: 
       stacktrace: 
@@ -824,8 +946,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheDepleteMethods/[Tests][TestEditor.TestHeartContainer+TheDepleteMethods._4_hearts_are_depleted_with_10_pieces_from_last_index]
       name: _4_hearts_are_depleted_with_10_pieces_from_last_index
       fullName: TestEditor.TestHeartContainer+TheDepleteMethods._4_hearts_are_depleted_with_10_pieces_from_last_index
-      resultStatus: 1
-      duration: 0.0012411
+      resultStatus: 0
+      duration: 0.0017955
       messages: 
       output: 
       stacktrace: 
@@ -841,8 +963,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheDepleteMethods/[Tests][TestEditor.TestHeartContainer+TheDepleteMethods._5_hearts_are_depleted_with_10_pieces_from_last1_index]
       name: _5_hearts_are_depleted_with_10_pieces_from_last1_index
       fullName: TestEditor.TestHeartContainer+TheDepleteMethods._5_hearts_are_depleted_with_10_pieces_from_last1_index
-      resultStatus: 1
-      duration: 0.0014299
+      resultStatus: 0
+      duration: 0.0021136
       messages: 
       output: 
       stacktrace: 
@@ -854,12 +976,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1028
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeartContainer+TheDepleteMethods][suite]
-    - id: 1032
+    - id: 1028
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheDepleteMethods/[Tests][TestEditor.TestHeartContainer+TheDepleteMethods._6_throw_exception_for_negative_number_of_heart_pieces]
       name: _6_throw_exception_for_negative_number_of_heart_pieces
       fullName: TestEditor.TestHeartContainer+TheDepleteMethods._6_throw_exception_for_negative_number_of_heart_pieces
-      resultStatus: 1
-      duration: 0.0003276
+      resultStatus: 0
+      duration: 0.0003383
       messages: 
       output: 
       stacktrace: 
@@ -869,14 +991,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1027
+      parentId: 1022
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeartContainer+TheDepleteMethods][suite]
-    - id: 1021
+    - id: 1015
       uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeartContainer+TheReplenishMethods][suite]
       name: TestHeartContainer+TheReplenishMethods
       fullName: TestEditor.TestHeartContainer+TheReplenishMethods
-      resultStatus: 1
-      duration: 0.0094666
+      resultStatus: 0
+      duration: 0.011339
       messages: 
       output: 
       stacktrace: 
@@ -885,14 +1007,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1034
+      parentId: 1030
       parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
     - id: 1022
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheReplenishMethods/[Tests][TestEditor.TestHeartContainer+TheReplenishMethods._1_empty_hearts_are_replenished]
       name: _1_empty_hearts_are_replenished
       fullName: TestEditor.TestHeartContainer+TheReplenishMethods._1_empty_hearts_are_replenished
-      resultStatus: 1
-      duration: 0.0009666
+      resultStatus: 0
+      duration: 0.0014538
       messages: 
       output: 
       stacktrace: 
@@ -908,8 +1030,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheReplenishMethods/[Tests][TestEditor.TestHeartContainer+TheReplenishMethods._2_hearts_are_replenished_in_order]
       name: _2_hearts_are_replenished_in_order
       fullName: TestEditor.TestHeartContainer+TheReplenishMethods._2_hearts_are_replenished_in_order
-      resultStatus: 1
-      duration: 0.0006797
+      resultStatus: 0
+      duration: 0.0011584
       messages: 
       output: 
       stacktrace: 
@@ -925,8 +1047,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheReplenishMethods/[Tests][TestEditor.TestHeartContainer+TheReplenishMethods._3_hearts_are_replenished_with_5_pieces]
       name: _3_hearts_are_replenished_with_5_pieces
       fullName: TestEditor.TestHeartContainer+TheReplenishMethods._3_hearts_are_replenished_with_5_pieces
-      resultStatus: 1
-      duration: 0.0006341
+      resultStatus: 0
+      duration: 0.0009904
       messages: 
       output: 
       stacktrace: 
@@ -942,8 +1064,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheReplenishMethods/[Tests][TestEditor.TestHeartContainer+TheReplenishMethods._4_hearts_are_replenished_with_10_pieces_from_0_index]
       name: _4_hearts_are_replenished_with_10_pieces_from_0_index
       fullName: TestEditor.TestHeartContainer+TheReplenishMethods._4_hearts_are_replenished_with_10_pieces_from_0_index
-      resultStatus: 1
-      duration: 0.0007786
+      resultStatus: 0
+      duration: 0.0007472
       messages: 
       output: 
       stacktrace: 
@@ -959,8 +1081,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheReplenishMethods/[Tests][TestEditor.TestHeartContainer+TheReplenishMethods._5_hearts_are_replenished_with_10_pieces_from_1_index]
       name: _5_hearts_are_replenished_with_10_pieces_from_1_index
       fullName: TestEditor.TestHeartContainer+TheReplenishMethods._5_hearts_are_replenished_with_10_pieces_from_1_index
-      resultStatus: 1
-      duration: 0.0011382
+      resultStatus: 0
+      duration: 0.0009219
       messages: 
       output: 
       stacktrace: 
@@ -972,12 +1094,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1021
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeartContainer+TheReplenishMethods][suite]
-    - id: 1026
+    - id: 1021
       uniqueId: Tests.dll/TestEditor/TestHeartContainer+TheReplenishMethods/[Tests][TestEditor.TestHeartContainer+TheReplenishMethods._6_throw_exception_for_negative_number_of_heart_pieces]
       name: _6_throw_exception_for_negative_number_of_heart_pieces
       fullName: TestEditor.TestHeartContainer+TheReplenishMethods._6_throw_exception_for_negative_number_of_heart_pieces
-      resultStatus: 1
-      duration: 0.0003338
+      resultStatus: 0
+      duration: 0.0002922
       messages: 
       output: 
       stacktrace: 
@@ -987,15 +1109,316 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
+      parentId: 1015
       parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestHeartContainer+TheReplenishMethods][suite]
-    m_ResultText: _5_hearts_are_replenished_with_10_pieces_from_1_index (0.001s)
+    - id: 1035
+      uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheCurrentHealthProperty][suite]
+      name: TestPlayer+TheCurrentHealthProperty
+      fullName: TestEditor.TestPlayer+TheCurrentHealthProperty
+      resultStatus: 0
+      duration: 0.0090209
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1038
+      parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
+    - id: 1036
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheCurrentHealthProperty/[Tests][TestEditor.TestPlayer+TheCurrentHealthProperty.health_default_to_0]
+      name: health_default_to_0
+      fullName: TestEditor.TestPlayer+TheCurrentHealthProperty.health_default_to_0
+      resultStatus: 0
+      duration: 0.0002283
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1035
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheCurrentHealthProperty][suite]
+    - id: 1038
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheCurrentHealthProperty/[Tests][TestEditor.TestPlayer+TheCurrentHealthProperty.throws_exception_when_current_health_is_greater_than_maximum]
+      name: throws_exception_when_current_health_is_greater_than_maximum
+      fullName: TestEditor.TestPlayer+TheCurrentHealthProperty.throws_exception_when_current_health_is_greater_than_maximum
+      resultStatus: 0
+      duration: 0.0009765
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1035
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheCurrentHealthProperty][suite]
+    - id: 1037
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheCurrentHealthProperty/[Tests][TestEditor.TestPlayer+TheCurrentHealthProperty.throws_exception_when_current_health_is_less_than_0]
+      name: throws_exception_when_current_health_is_less_than_0
+      fullName: TestEditor.TestPlayer+TheCurrentHealthProperty.throws_exception_when_current_health_is_less_than_0
+      resultStatus: 0
+      duration: 0.0004356
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1035
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheCurrentHealthProperty][suite]
+    - id: 1047
+      uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheDamagedEvent][suite]
+      name: TestPlayer+TheDamagedEvent
+      fullName: TestEditor.TestPlayer+TheDamagedEvent
+      resultStatus: 0
+      duration: 0.00776
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1051
+      parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
+    - id: 1049
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheDamagedEvent/[Tests][TestEditor.TestPlayer+TheDamagedEvent.overkill_is_ignored_event]
+      name: overkill_is_ignored_event
+      fullName: TestEditor.TestPlayer+TheDamagedEvent.overkill_is_ignored_event
+      resultStatus: 0
+      duration: 0.0005552
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1047
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheDamagedEvent][suite]
+    - id: 1048
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheDamagedEvent/[Tests][TestEditor.TestPlayer+TheDamagedEvent.raises_event_on_damage]
+      name: raises_event_on_damage
+      fullName: TestEditor.TestPlayer+TheDamagedEvent.raises_event_on_damage
+      resultStatus: 0
+      duration: 0.000264
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1047
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheDamagedEvent][suite]
+    - id: 1044
+      uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheHealedEvent][suite]
+      name: TestPlayer+TheHealedEvent
+      fullName: TestEditor.TestPlayer+TheHealedEvent
+      resultStatus: 0
+      duration: 0.007492
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1047
+      parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
+    - id: 1046
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheHealedEvent/[Tests][TestEditor.TestPlayer+TheHealedEvent.overhealing_is_ignored_event]
+      name: overhealing_is_ignored_event
+      fullName: TestEditor.TestPlayer+TheHealedEvent.overhealing_is_ignored_event
+      resultStatus: 0
+      duration: 0.0004294
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1044
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheHealedEvent][suite]
+    - id: 1045
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheHealedEvent/[Tests][TestEditor.TestPlayer+TheHealedEvent.raises_event_on_heal]
+      name: raises_event_on_heal
+      fullName: TestEditor.TestPlayer+TheHealedEvent.raises_event_on_heal
+      resultStatus: 0
+      duration: 0.0004389
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1044
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheHealedEvent][suite]
+    - id: 1039
+      uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheHealMethod][suite]
+      name: TestPlayer+TheHealMethod
+      fullName: TestEditor.TestPlayer+TheHealMethod
+      resultStatus: 0
+      duration: 0.0130117
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1043
+      parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
+    - id: 1041
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheHealMethod/[Tests][TestEditor.TestPlayer+TheHealMethod.one_health_increment_current_health]
+      name: one_health_increment_current_health
+      fullName: TestEditor.TestPlayer+TheHealMethod.one_health_increment_current_health
+      resultStatus: 0
+      duration: 0.0006011
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1039
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheHealMethod][suite]
+    - id: 1042
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheHealMethod/[Tests][TestEditor.TestPlayer+TheHealMethod.overhealing_is_ignored]
+      name: overhealing_is_ignored
+      fullName: TestEditor.TestPlayer+TheHealMethod.overhealing_is_ignored
+      resultStatus: 0
+      duration: 0.0002099
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1039
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheHealMethod][suite]
+    - id: 1043
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheHealMethod/[Tests][TestEditor.TestPlayer+TheHealMethod.overkill_is_ignored]
+      name: overkill_is_ignored
+      fullName: TestEditor.TestPlayer+TheHealMethod.overkill_is_ignored
+      resultStatus: 0
+      duration: 0.0002656
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1039
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheHealMethod][suite]
+    - id: 1040
+      uniqueId: Tests.dll/TestEditor/TestPlayer+TheHealMethod/[Tests][TestEditor.TestPlayer+TheHealMethod.zero_heal_does_nothing]
+      name: zero_heal_does_nothing
+      fullName: TestEditor.TestPlayer+TheHealMethod.zero_heal_does_nothing
+      resultStatus: 0
+      duration: 0.0003522
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1039
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayer+TheHealMethod][suite]
+    - id: 1001
+      uniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayerMovement][suite]
+      name: TestPlayerMovement
+      fullName: TestEditor.TestPlayerMovement
+      resultStatus: 1
+      duration: 0.0350234
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1054
+      parentUniqueId: Tests.dll/[Tests][TestEditor][suite]
+    - id: 1002
+      uniqueId: Tests.dll/TestEditor/TestPlayerMovement/[Tests][TestEditor.TestPlayerMovement.move_along_x_axis_for_horizontal_input]
+      name: move_along_x_axis_for_horizontal_input
+      fullName: TestEditor.TestPlayerMovement.move_along_x_axis_for_horizontal_input
+      resultStatus: 1
+      duration: 0.0176427
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayerMovement][suite]
+    - id: 1003
+      uniqueId: Tests.dll/TestEditor/TestPlayerMovement/[Tests][TestEditor.TestPlayerMovement.move_along_z_axis_for_vertical_input]
+      name: move_along_z_axis_for_vertical_input
+      fullName: TestEditor.TestPlayerMovement.move_along_z_axis_for_vertical_input
+      resultStatus: 1
+      duration: 0.0002472
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/TestEditor/[Tests][TestEditor.TestPlayerMovement][suite]
+    m_ResultText: move_along_x_axis_for_horizontal_input (0.018s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4710dbdf
-      m_LastClickedID: -539291577
-      m_ExpandedIDs: 6bbacdaee557abf7927746ff1b9ff317a2303c406e1030455248c052ea9d4571ffffff7f
+      m_SelectedIDs: f35a8e5f
+      m_LastClickedID: 1603164915
+      m_ExpandedIDs: f2ecfdb991424ec2d86781c51a1f6dcd8dc556eae557abf7927746ffaded1d2d5248c052b16c0a5651bd8e7cffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1041,10 +1464,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 634
+    x: 1920
+    y: 530
     width: 1465
-    height: 365
+    height: 469
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1062,22 +1485,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/PlayTests
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/PlayTests
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\Projects\_Unity\_Training\TDD
+  m_LastProjectPath: G:\Projects\Unity\Training\TDD
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 30800000
-    m_LastClickedID: 32816
-    m_ExpandedIDs: 000000002c80000000ca9a3bffffff7f
+    m_SelectedIDs: 8e8c0000
+    m_LastClickedID: 35982
+    m_ExpandedIDs: 00000000de590000aa5a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1093,7 +1516,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1105,7 +1528,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000de590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1149,7 +1572,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1176,12 +1599,12 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Inspector
+    m_Text: Debug
     m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1466
+    x: 3386
     y: 73
     width: 453
     height: 926
@@ -1198,7 +1621,7 @@ MonoBehaviour:
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
-  m_InspectorMode: 0
+  m_InspectorMode: 1
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
@@ -1222,10 +1645,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1920
     y: 73
     width: 362
-    height: 540
+    height: 436
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1235,7 +1658,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3694ffff0299ffff0e9dffff00a3ffff1ca3ffff38a3ffffeca3ffffd8a4ffff6ca7ffffdea7ffff4cabffffb2abffff1aafffffb2b0ffff26b4ffff86b6ffffeeb9ffffc4baffff2cbeffff00bfffff68c2ffff42c3ffff00c6ffffdec6ffff9cc9ffff82caffff48cdffff74ceffff36d1ffff2ed3ffff8a8000009e800000
+      m_ExpandedIDs: 36dbfeff74dbfeffd6dcfeffccddfeff0adefeff54dffeff46e0feff84e0feffcee1feff04e3feff44e3feff7ce4feff38e5feff78e5feffd6e6feffa8e7feffe8e7feff38e9feff8ae9feffcae9feff1aebfeff80ebfeffc0ebfeff10edfefffeedfeff3eeefeff8eeffeff20f0feff60f0feffb0f1feff98f3feffd8f3feff2af5feff62f6feffb2f6feff38f8feff46f9feff96f9fefffcfafeff4cfbfeff9cfbfefffcfcfeffd8fdfeff28fefeff88fffeff0c00ffff5c00ffffbc01ffffa402fffff402ffff5404ffffd804ffff1805ffff5606ffffaa0bffff1216ffff0e1affffac32ffff4039fffff63dffff183effff223fffffea43ffffba48ffff5e4affff644bffff644cffff824dffff864effff8c4fffff9650ffff9e51ffffa852ffffae53ffff1c54ffff2c55ffff2656ffff1e57ffff6c59ffff805cffff6860ffff8661ffffa064ffffc669ffff5c6dfffffa71ffff6676fffffe79ffff9e7dffff7081ffff3084ffffc487ffff4c8bffffe48effff1290ffffa490ffffa893ffff4497ffff249affffdc9cffff989fffff58a2ffffc8a3ffff3ea5ffffc4a6ffff4aa7ffff9ca8ffff4ea9ffffe4a9ffffeaaaffff98abffffb4aeffff7eafffff60b0ffff3eb1ffff4ab3ffffcab5ffffa8b6ffff1cb8ffff2eb9ffff1cbaffff02bbffff16bdffff58befffff8befffff8c0ffff4cc3ffffb0c5ffff2cc9ffff94ccffff4ccdffff5aceffff70cfffff20d3ffff10d8ffffd2d8ffff82daffff2edcffffe2ddffff70dffffffee0ffff42e2ffff0ae4ffff48e5ffff82e6ffffc8e7ffff42e9ffff64eaffff6cebffff9cf2ffff34faffff36fbffff745e0000885e000086780000b2780000ba780000f6860000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1279,10 +1702,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 363
+    x: 2283
     y: 73
     width: 1101
-    height: 540
+    height: 436
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1484,9 +1907,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 20.116531, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 20.116531, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1510,7 +1933,7 @@ MonoBehaviour:
         m_Target: 0
         speed: 2
         m_Value: 0
-      m_Color: {r: 0.1355019, g: 0.8207547, b: 0.1505517, a: 0.682353}
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 0, y: 0}
     yGrid:
@@ -1518,7 +1941,7 @@ MonoBehaviour:
         m_Target: 1
         speed: 2
         m_Value: 1
-      m_Color: {r: 0.1355019, g: 0.8207547, b: 0.1505517, a: 0.682353}
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
@@ -1526,20 +1949,20 @@ MonoBehaviour:
         m_Target: 0
         speed: 2
         m_Value: 0
-      m_Color: {r: 0.1355019, g: 0.8207547, b: 0.1505517, a: 0.682353}
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 0, y: 0}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: -0.39719543, y: -0.072294034, z: 0.03140496, w: -0.91434383}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: -0.39719513, y: -0.07229398, z: 0.03140494, w: -0.9143432}
   m_Size:
-    m_Target: 10
+    m_Target: 13.022601
     speed: 2
-    m_Value: 10
+    m_Value: 13.022601
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1584,10 +2007,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 363
+    x: 2283
     y: 73
     width: 1101
-    height: 540
+    height: 436
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1598,7 +2021,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1101, y: 519}
+  m_TargetSize: {x: 1101, y: 415}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1615,8 +2038,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -550.5
     m_HBaseRangeMax: 550.5
-    m_VBaseRangeMin: -259.5
-    m_VBaseRangeMax: 259.5
+    m_VBaseRangeMin: -207.5
+    m_VBaseRangeMax: 207.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1635,9 +2058,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1101
-      height: 519
+      height: 415
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 550.5, y: 259.5}
+    m_Translation: {x: 550.5, y: 207.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -1645,12 +2068,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -550.5
-      y: -259.5
+      y: -207.5
       width: 1101
-      height: 519
+      height: 415
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1101, y: 540}
+  m_LastWindowPixelSize: {x: 1101, y: 436}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1676,10 +2099,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 634
+    x: 1920
+    y: 530
     width: 1465
-    height: 365
+    height: 469
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
